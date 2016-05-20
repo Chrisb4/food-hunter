@@ -1,0 +1,21 @@
+<%= form_for [:admin, @ingredient] do |form| %>
+  <% if @ingredient.errors.any? %>
+   <div class= 'alert'>
+   <h2> You have errors </h2>
+
+   <ul>
+     <% @ingredient.errors.full_messages.each do |message| %>
+     <li><%= message  %></li>
+     <% end %>
+   </ul>
+   </div>
+  <% end %>
+
+  <p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name  %>
+  </p>
+
+  <%= form.submit  %> or <%= link_to 'Cancel', admin_ingredients_path  %>
+
+<% end %>

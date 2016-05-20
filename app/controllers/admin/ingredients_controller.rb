@@ -1,10 +1,13 @@
 module Admin
   class IngredientsController < ActionController::Base
     before_action :set_ingredient, only: [:edit, :update, :destroy]
-
+    layout 'admin/admin'
 
     def index
       @ingredients=Ingredient.all
+    end
+
+    def show
     end
 
     def new
