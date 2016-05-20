@@ -11,8 +11,7 @@ function getIngredients() {
     });
 
     ingredients.done(function(data){
-      debugger;
-          $('.ingredients').html('<p>' + data.ingredients + '</p>');
+      $('.ingredients').html('<p>' + data[1].name + '</p>');
     });
 
     ingredients.fail(function(jqXHR, textStatus, errorThrown){
