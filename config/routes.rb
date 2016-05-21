@@ -22,7 +22,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :ingredients, only: [:index], defaults: { :format => 'json' }
+    resources :recipes, only: [:index], defaults: { :format => 'json' }
   end
+
+
 
   # Example resource route with options:
   #   resources :products do
