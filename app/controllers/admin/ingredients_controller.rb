@@ -39,17 +39,16 @@ module Admin
       redirect_to admin_ingredients_path
     end
 
-private
+  private
 
-      def set_ingredient
-        @ingredient = Ingredient.find(params[:id])
-      end
-
-      def ingredient_params
-        params.require(:ingredient).permit(:name)
-      end
+    def set_ingredient
+      @ingredient = Ingredient.find(params[:id])
     end
 
+    def ingredient_params
+      params.require(:ingredient).permit(:name)
+    end
 
   end
+end
 
