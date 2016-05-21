@@ -1,12 +1,14 @@
 <h1>Ingredients</h1>
 <br>
+
 <%= link_to 'Add Ingredient', new_admin_ingredient_path %>
 
-    <% @ingredients.each do |ingredient| %>
-      <div>
-        <p class= 'ingredient_name'><%= ingredient.name %></p>
+  <% @ingredients.each do |ingredient| %>
 
-          <%= link_to 'Edit', edit_admin_ingredient_path(ingredient)  %> | <%= link_to 'Delete', admin_ingredient_path(ingredient), method: :delete  %>
-      </div>
-      <br>
-    <% end %>
+    <div>
+      <p class= 'ingredient_name'><%= ingredient.name %></p>
+        <%= link_to 'Edit', edit_admin_ingredient_path(ingredient)  %> | <%= link_to 'Delete', admin_ingredient_path(ingredient), method: :delete  %>
+    </div>
+
+    <br>
+  <% end %>

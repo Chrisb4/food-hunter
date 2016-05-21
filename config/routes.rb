@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   #   resources :products
 
   namespace :admin do
-      resources :ingredients
+    resources :ingredients
   end
 
   namespace :api do
-  resources :ingredients, only: [:index], defaults: { :format => 'json' }
-end
+    resources :ingredients, only: [:index], defaults: { :format => 'json' }
+  end
 
   # Example resource route with options:
   #   resources :products do

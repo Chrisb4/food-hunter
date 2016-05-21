@@ -5,6 +5,7 @@ getIngredients();
 getRecipes();
 
 // FUNCTIONS
+// gets ingredients from api
 function getIngredients() {
 
   var ingredients = $.ajax({
@@ -24,6 +25,7 @@ function getIngredients() {
   });
 }
 
+// gets recipes from api
 function getRecipes() {
 
   var recipes = $.ajax({
