@@ -1,3 +1,46 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+.main-header {
+  margin-bottom: 50px;
+  padding-top: 30px;
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+label {
+  display: block;
+}
+
+.ingredient-list,
+.real-time-display {
+  float: left;
+}
+
+.ingredient-list {
+  width: 70%;
+  padding-right: 50px;
+}
+
+.real-time-display {
+  width: 30%;
+}
