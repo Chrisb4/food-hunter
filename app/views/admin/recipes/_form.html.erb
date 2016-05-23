@@ -1,0 +1,30 @@
+<%= form_for [:admin, @recipe] do |form| %>
+  <% if @recipe.errors.any? %>
+   <div class= 'alert'>
+   <h2> You have errors </h2>
+
+   <ul>
+     <% @recipe.errors.full_messages.each do |message| %>
+     <li><%= message  %></li>
+     <% end %>
+   </ul>
+   </div>
+
+  <% end %>
+
+  <p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name  %>
+  </p>
+  <p>
+  <%= form.label :minutes %><br>
+  <%= form.text_field :minutes  %>
+  </p>
+  <p>
+  <%= form.label :description %><br>
+  <%= form.text_field :description  %>
+  </p>
+
+  <%= form.submit  %> or <%= link_to 'Cancel', admin_recipes_path  %>
+
+  <% end %>
