@@ -67,17 +67,20 @@ recipes = Recipe.create([
 {name: "Peanut Butter Spoon",
  directions: "Grab a spoon.  Pull out a heaping pile of peanut butter and enjoy!  (If you can't find a spoon, your hands will work in a pinch!)",
  minutes: 1,
- description: "Pure Peanut Bliss"
+ description: "Pure Peanut Bliss",
+ ingredients: [ingredients[0]]
 },
 {name: "Hard Boiled Eggs",
  directions: "Fill a pot with 5 cups water.  Bring to a rolling boil.  Add eggs and set timer for 13 minutes. Remove egss and shock them in an ice bath.  Enjoy!",
  minutes: 20,
- description: "Classic Egg Magic"
+ description: "Classic Egg Magic",
+ ingredients: [ingredients[12]]
 },
 {name: "Omelet",
  directions: "Heat butter in skillet over medium high heat.  Add diced onions and red peppers.  Sautee for 5 minutes.  Lower heat to medium low, add whisked eggs.  Cook until done.",
  minutes: 20,
- description: "Breakfast Goodness"
+ description: "Breakfast Goodness",
+ ingredients: [ingredients[12], ingredients[8], ingredients[14]]
 },
 {name: "Simple Black Beans",
  directions: "Heat 2 Tablespoons of butter in a saucepan over medium low. Add onions and garlic, cook for 3 minutes.  Add black beans, salt, pepper, chili powder, and cayenne pepper.  Cook for 6 minutes until hot.",
