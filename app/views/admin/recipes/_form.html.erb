@@ -25,8 +25,8 @@
   <%= form.text_field :description  %>
   </p>
 
-  <%= form.label :ingredients %>
-  <%= form.collection_check_boxes(:ingredients, Ingredient.all, :id, :name) %>
+  <%= form.label :ingredient_ids, 'Ingredients' %>
+  <%= form.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %>
 
   <%= form.submit  %> or <%= link_to 'Cancel', admin_recipes_path  %>
 
