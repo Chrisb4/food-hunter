@@ -32,6 +32,7 @@ function getIngredients() {
 
 // gets recipes from api
 function getRecipes() {
+  $('.recipes').empty();
 
   var recipes = $.ajax({
     url: '/api/recipes',
