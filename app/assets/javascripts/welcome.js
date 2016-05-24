@@ -9,8 +9,8 @@ $('.get-recipes').click(function(e) {
   $("input:checkbox[name=ingredient]:checked").each(function(){
     checkedIngredients.push($(this).val());
   });
-  getRecipes();
-  });
+  getRecipes(checkedIngredients);
+});
 
 // FUNCTIONS
 // gets ingredients from api
@@ -37,20 +37,21 @@ function getIngredients() {
 
 
 // gets recipes from api
-function getRecipes() {
+function getRecipes(checkedIngredients) {
   $('.recipes').empty();
 
   var recipes = $.ajax({
     url: '/api/recipes',
     type: 'GET',
     dataType: 'json',
+    data: { ingredients: checkedIngredients }
   });
 
   recipes.done(function(data){
     for (var i = 0; i < data.length; i++) {
       $('.recipes').append('<div class="recipe">' +
         '<h4 class="recipe-title">' + data[i].description + '</h4>' +
-        '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minutes' + '</p>' +
+        '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minute(s)' + '</p>' +
         '<p>' + data[i].directions + '</p>' + '</div>');
     }
   });
