@@ -20,7 +20,8 @@ function getIngredients() {
 
   ingredients.done(function(data){
     for (var i = 0; i < data.length; i++) {
-      $('.ingredients').append('<label class="ingredient"><input type="checkbox">' +
+      $('.ingredients').append('<label class="ingredient">' +
+        '<input type="checkbox" value=' + data[i].id + '>' +
         data[i].name + '</label>');
     }
   });
