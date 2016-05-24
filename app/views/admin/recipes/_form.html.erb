@@ -24,6 +24,10 @@
   <%= form.label :description %><br>
   <%= form.text_field :description  %>
   </p>
+  <p>
+  <%= form.label :directions %><br>
+  <%= form.text_field :directions  %>
+  </p>
 
   <%= form.label :ingredient_ids, 'Ingredients' %>
   <%= form.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %>
