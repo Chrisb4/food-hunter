@@ -85,36 +85,43 @@ recipes = Recipe.create([
 {name: "Simple Black Beans",
  directions: "Heat 2 Tablespoons of butter in a saucepan over medium low. Add onions and garlic, cook for 3 minutes.  Add black beans, salt, pepper, chili powder, and cayenne pepper.  Cook for 6 minutes until hot.",
  minutes: 15,
- description: "Tasty Black Beans"
+ description: "Tasty Black Beans",
+ ingredients: [ingredients[18], ingredients[8], ingredients[10]]
 },
 {name: "Sticky Nut Balls",
  directions: "In a medium size bowl, mix peanut butter, almonds and raisins.  Form into balls.  Place on a sterling silver tray with a doily.",
  minutes: 10,
- description: "Classy and Sloppy"
+ description: "Classy and Sloppy",
+ ingredients: [ingredients[0], ingredients[20], ingredients[6]]
 },
 {name: "Fried Cabbage",
  directions: "Bring 2 Tablespoons Olive Oil to 300 degrees F over medium high heat.  Add Julienned cabbage and onions.  Sautee for 15 minutes until cabbage and onions begin to caramelize.  Hit it with apple cider vinegar to deglaze the skillet.  Enjoy!",
  minutes: 25,
- description: "Golden Delicious"
+ description: "Golden Delicious",
+ ingredients: [ingredients[9], ingredients[8]]
 },
 {name: "Snowmen Nose",
  directions: "Wash carrots under running water. Don't be a sucker and remove the skin!!! (That's where all the nutrients are!)",
  minutes: 1-3,
- description: "Pretend you're a Zombie, for Snowmen!!!"
+ description: "Pretend you're a Zombie, for Snowmen!!!",
+ ingredients: [ingredients[19]]
 },
 {name: "Monkeys Delight",
  directions: "Peel banana, eat.",
  minutes: 1,
- description: "Banana Minimalism"
+ description: "Banana Minimalism",
+ ingredients: [ingredients[5]]
 },
 {name: "Ants on a log",
  directions: "Peel banana, spread peanut butter on top, sprinkle with raisins.",
  minutes: 5,
- description: "Not just for Kids"
+ description: "Not just for Kids",
+ ingredients: [ingredients[5], ingredients[0], ingredients[6]]
 },
 {name: "Quick Slaw",
  directions: "Chop cabbage, onions and carrots in thin strips. Toss in Olive Oil and Apple Cider Vinegar. ",
  minutes: 10,
- description: "Like Crunchy Salad"
+ description: "Like Crunchy Salad",
+ ingredients: [ingredients[9], ingredients[8]]
 }
 ])
