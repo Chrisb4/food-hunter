@@ -2,7 +2,11 @@ $( document ).ready(function() {
 
 // functions ready at page load
 getIngredients();
-getRecipes();
+
+// event listeners
+$('.get-recipes').click(function(e) {
+  getRecipes();
+  });
 
 // FUNCTIONS
 // gets ingredients from api
