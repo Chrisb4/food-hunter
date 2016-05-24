@@ -16,7 +16,7 @@
       <a href="/admin/ingredients">Ingredients</a>
     </li>
     <li>
-      <a href="">Log Out</a>
+      <%= link_to 'Log out', destroy_admin_session_path, method: :delete %>
     </li>
   </ul>
 </nav>

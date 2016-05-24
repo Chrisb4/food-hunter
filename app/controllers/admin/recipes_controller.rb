@@ -1,5 +1,5 @@
-module Admin
-  class RecipesController < ApplicationController
+  class Admin::RecipesController < AdminController
+    before_action :authenticate_admin!
     before_action :set_recipe, only: [:edit, :update, :destroy]
     layout 'admin/admin'
 
@@ -46,8 +46,8 @@ module Admin
     end
 
     def recipe_params
-      params.require(:recipe).permit(:name, :directions, :minutes, :description)
+      params.require(:recipe).permit(:name, :directions, :minutes, :description, :ingredient_id)
     end
 
   end
-end
+
