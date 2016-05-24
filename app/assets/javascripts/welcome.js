@@ -1,10 +1,14 @@
 $( document ).ready(function() {
 
-// functions ready at page load
+// functions and variables ready at page load
 getIngredients();
 
 // event listeners
 $('.get-recipes').click(function(e) {
+  var checkedIngredients = [];
+  $("input:checkbox[name=ingredient]:checked").each(function(){
+    checkedIngredients.push($(this).val());
+  });
   getRecipes();
   });
 
@@ -21,7 +25,7 @@ function getIngredients() {
   ingredients.done(function(data){
     for (var i = 0; i < data.length; i++) {
       $('.ingredients').append('<label class="ingredient">' +
-        '<input type="checkbox" value=' + data[i].id + '>' +
+        '<input type="checkbox" name="ingredient" value=' + data[i].id + '>' +
         data[i].name + '</label>');
     }
   });
@@ -30,6 +34,7 @@ function getIngredients() {
     console.log(errorThrown);
   });
 }
+
 
 // gets recipes from api
 function getRecipes() {
