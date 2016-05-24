@@ -37,10 +37,17 @@ label {
 }
 
 .ingredient-list {
-  width: 70%;
+  width: 60%;
   padding-right: 50px;
 }
 
 .real-time-display {
-  width: 30%;
+  width: 40%;
+}
+
+.recipe {
+  padding-bottom: 10px;
+  .cooking-time {
+    font-size: 12px;
+  }
 }

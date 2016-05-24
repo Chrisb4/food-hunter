@@ -36,7 +36,10 @@ function getRecipes() {
 
   recipes.done(function(data){
     for (var i = 0; i < data.length; i++) {
-      $('.recipes').append('<p>' + data[i].name + '</p>');
+      $('.recipes').append('<div class="recipe">' +
+        '<h4 class="recipe-title">' + data[i].description + '</h4>' +
+        '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minutes' + '</p>' +
+        '<p>' + data[i].directions + '</p>' + '</div>');
     }
   });
 
