@@ -39,6 +39,9 @@ label {
 .ingredient-list {
   width: 60%;
   padding-right: 50px;
+  .ingredient {
+    padding-bottom: 5px;
+  }
 }
 
 .real-time-display {
