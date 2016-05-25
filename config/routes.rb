@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admin
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -19,11 +19,14 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :ingredients
     resources :recipes
+
+    root 'recipes#index'
   end
 
   namespace :api do
     resources :ingredients, only: [:index], defaults: { :format => 'json' }
     resources :recipes, only: [:index], defaults: { :format => 'json' }
+    resources :categories, only: [:index], defaults: { :format => 'json' }
   end
 
 

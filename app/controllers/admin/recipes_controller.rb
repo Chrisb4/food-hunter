@@ -1,4 +1,4 @@
-  class Admin::RecipesController < AdminController
+  class Admin::RecipesController < ApplicationController
     before_action :authenticate_admin!
     before_action :set_recipe, only: [:edit, :update, :destroy]
     layout 'admin/admin'

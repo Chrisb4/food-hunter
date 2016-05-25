@@ -5,58 +5,101 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.destroy_all
+
+categories = Category.create([
+
+{name: "Protein",
+},
+{name: "Vegetables",
+},
+{name: "Fruit",
+},
+{name: "Grains",
+},
+{name: "Dairy",
+},
+{name: "Pantry",
+},
+{name: "Nuts and Seeds",
+}
+])
 
 Ingredient.destroy_all
 
 ingredients = Ingredient.create([
 
-{name: "Peanut Butter"
+{name: "Peanut Butter",
+  category_id: 6
 },
-{name: "Lettuce"
+{name: "Lettuce",
+  category_id: 2
 },
-{name: "Cauliflower"
+{name: "Cauliflower",
+  category_id: 2
 },
-{name: "Avocado"
+{name: "Avocado",
+  category_id: 2
 },
-{name: "Green Onion"
+{name: "Green Onion",
+  category_id: 2
 },
-{name: "Banana"
+{name: "Banana",
+  category_id: 3
 },
-{name: "Raisins"
+{name: "Raisins",
+  category_id: 6
 },
-{name: "Apple Cider Vinegar"
+{name: "Apple Cider Vinegar",
+  category_id: 6
 },
-{name: "Onion"
+{name: "Onion",
+  category_id: 2
 },
-{name: "Cabbage"
+{name: "Cabbage",
+  category_id: 2
 },
-{name: "Garlic"
+{name: "Garlic",
+  category_id: 2
 },
-{name: "Lentils"
+{name: "Lentils",
+  category_id: 6
 },
-{name: "Eggs"
+{name: "Eggs",
+  category_id: 1
 },
-{name: "Green Peppers"
+{name: "Green Peppers",
+  category_id: 2
 },
-{name: "Red Peppers"
+{name: "Red Peppers",
+  category_id: 2
 },
-{name: "Quinoa"
+{name: "Quinoa",
+  category_id: 4
 },
-{name: "Butter"
+{name: "Butter",
+  category_id: 5
 },
-{name: "Rice"
+{name: "Rice",
+  category_id: 4
 },
-{name: "Black Beans"
+{name: "Black Beans",
+  category_id: 6
 },
-{name: "Carrots"
+{name: "Carrots",
+  category_id: 2
 },
-{name: "Almonds"
+{name: "Almonds",
+  category_id: 7
 },
-{name: "Tuna"
+{name: "Tuna",
+  category_id: 1
 },
-{name: "Mayo"
+{name: "Mayo",
+  category_id: 6
 },
-{name: "Cucumbers"
+{name: "Cucumbers",
+  category_id: 2
 }
 ])
 

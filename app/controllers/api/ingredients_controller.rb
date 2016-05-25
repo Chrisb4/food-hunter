@@ -1,7 +1,7 @@
 module Api
   class IngredientsController < ApplicationController
     def index
-      render json: Ingredient.all
+      render json: Category.all, :include => :ingredients
     end
   end
 end
