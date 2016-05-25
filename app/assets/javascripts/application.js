@@ -2,7 +2,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
 $( document ).ready(function() {
 
   // functions and variables ready at page load
@@ -20,9 +19,13 @@ $( document ).ready(function() {
 
     ingredients.done(function(data){
       for (var i = 0; i < data.length; i++) {
-        $('.ingredients').append('<label class="ingredient">' +
-          '<input type="checkbox" name="ingredient" value=' + data[i].id + '>' +
-          data[i].name + '</label>');
+        var ingredients = data[i].ingredients
+        for (var j = 0; j < ingredients.length; j++) {
+          var ingredient = ingredients[j]
+          $('.ingredients').append('<label class="ingredient">' +
+            '<input type="checkbox" name="ingredient" value=' + ingredient.id + '>' +
+            ingredient.name + '</label>');
+        }
       }
 
       $('input:checkbox[name=ingredient]').change(function(e) {
