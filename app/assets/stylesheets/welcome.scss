@@ -10,11 +10,19 @@
   box-sizing: border-box;
 }
 
+body {
+  //
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
+  overflow: auto;
   font-size: 14px;
   font-family: sans-serif;
+  border: 10px;
+  // background: #F5F6C8 url("vintage-dog-1.jpg") no-repeat center;
+  // background-size: 100%;
 }
 
 .main-header {

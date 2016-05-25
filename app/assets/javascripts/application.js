@@ -51,6 +51,10 @@ $( document ).ready(function() {
   function getRecipes(checkedIngredients) {
     $('.recipes').empty();
 
+    if (checkedIngredients.length === 0) {
+      return;
+    }
+
     var recipes = $.ajax({
       url: '/api/recipes',
       type: 'GET',
