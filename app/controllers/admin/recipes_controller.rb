@@ -46,7 +46,7 @@
     end
 
     def recipe_params
-      params.require(:recipe).permit(:name, :directions, :minutes, :description, ingredient_ids: [])
+      params.require(:recipe).permit(:name, :directions, :minutes, :description, :photo, ingredient_ids: [])
     end
 
   end

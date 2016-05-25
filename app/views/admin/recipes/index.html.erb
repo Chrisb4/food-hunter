@@ -1,14 +1,13 @@
 <h1>Recipes</h1>
 <br>
-
 <%= link_to 'Add Recipe', new_admin_recipe_path %>
-
+<br>
   <% @recipes.each do |recipe| %>
 
-    <div>
-      <p class= 'recipe_name'><%= recipe.name %></p>
-        <%= link_to 'Edit', edit_admin_recipe_path(recipe)  %> | <%= link_to 'Delete', admin_recipe_path(recipe), method: :delete  %>
-    </div>
+  <div>
+    <div class= 'recipe_photo'><%= image_tag recipe.photo.url(:medium)  %></div>
+    <p class= 'recipe_name'><%= recipe.name %></p>
+    <p><%= link_to 'Edit', edit_admin_recipe_path(recipe)  %> | <%= link_to 'Delete', admin_recipe_path(recipe), method: :delete  %></p>
+  </div>
 
-    <br>
   <% end %>
