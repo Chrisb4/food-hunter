@@ -46,7 +46,7 @@ private
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:name)
+    params.require(:ingredient).permit(:name, :category_id)
   end
 
 end

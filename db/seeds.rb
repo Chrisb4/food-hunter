@@ -30,76 +30,76 @@ Ingredient.destroy_all
 ingredients = Ingredient.create([
 
 {name: "Peanut Butter",
-  category_id: 5
-},
-{name: "Lettuce",
-  category_id: 1
-},
-{name: "Cauliflower",
-  category_id: 1
-},
-{name: "Avocado",
-  category_id: 1
-},
-{name: "Green Onion",
-  category_id: 1
-},
-{name: "Banana",
-  category_id: 2
-},
-{name: "Raisins",
-  category_id: 5
-},
-{name: "Apple Cider Vinegar",
-  category_id: 5
-},
-{name: "Onion",
-  category_id: 1
-},
-{name: "Cabbage",
-  category_id: 1
-},
-{name: "Garlic",
-  category_id: 1
-},
-{name: "Lentils",
-  category_id: 5
-},
-{name: "Eggs",
-  category_id: 0
-},
-{name: "Green Peppers",
-  category_id: 1
-},
-{name: "Red Peppers",
-  category_id: 1
-},
-{name: "Quinoa",
-  category_id: 3
-},
-{name: "Butter",
-  category_id: 4
-},
-{name: "Rice",
-  category_id: 3
-},
-{name: "Black Beans",
-  category_id: 5
-},
-{name: "Carrots",
-  category_id: 1
-},
-{name: "Almonds",
   category_id: 6
 },
-{name: "Tuna",
-  category_id: 0
+{name: "Lettuce",
+  category_id: 2
 },
-{name: "Mayo",
+{name: "Cauliflower",
+  category_id: 2
+},
+{name: "Avocado",
+  category_id: 2
+},
+{name: "Green Onion",
+  category_id: 2
+},
+{name: "Banana",
+  category_id: 3
+},
+{name: "Raisins",
+  category_id: 6
+},
+{name: "Apple Cider Vinegar",
+  category_id: 6
+},
+{name: "Onion",
+  category_id: 2
+},
+{name: "Cabbage",
+  category_id: 2
+},
+{name: "Garlic",
+  category_id: 2
+},
+{name: "Lentils",
+  category_id: 6
+},
+{name: "Eggs",
+  category_id: 1
+},
+{name: "Green Peppers",
+  category_id: 2
+},
+{name: "Red Peppers",
+  category_id: 2
+},
+{name: "Quinoa",
+  category_id: 4
+},
+{name: "Butter",
   category_id: 5
 },
-{name: "Cucumbers",
+{name: "Rice",
+  category_id: 4
+},
+{name: "Black Beans",
+  category_id: 6
+},
+{name: "Carrots",
+  category_id: 2
+},
+{name: "Almonds",
+  category_id: 7
+},
+{name: "Tuna",
   category_id: 1
+},
+{name: "Mayo",
+  category_id: 6
+},
+{name: "Cucumbers",
+  category_id: 2
 }
 ])
 
