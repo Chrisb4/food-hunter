@@ -19,6 +19,9 @@ $( document ).ready(function() {
 
     ingredients.done(function(data){
       for (var i = 0; i < data.length; i++) {
+        var categoryName = data[i].name
+        $('.ingredients').append('<h4>' + categoryName + '</h4>');
+
         var ingredients = data[i].ingredients
         for (var j = 0; j < ingredients.length; j++) {
           var ingredient = ingredients[j]
