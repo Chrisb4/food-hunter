@@ -1,4 +1,5 @@
-class Admin::IngredientsController < AdminController
+class Admin::IngredientsController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_ingredient, only: [:edit, :update, :destroy]
   layout 'admin/admin'
 
