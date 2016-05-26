@@ -4,17 +4,21 @@ module Api
       ingredients = params[:ingredients]
       recipes = []
 
-      Recipe.all.includes(:ingredients).each do |recipe|
-        match = true
+      if ingredients
+        Recipe.all.includes(:ingredients).each do |recipe|
+          match = true
 
-        recipe.ingredients.each do |ingredient|
-          unless ingredients.include?(ingredient.id.to_s)
-            match = false
-            break
+          recipe.ingredients.each do |ingredient|
+            unless ingredients.include?(ingredient.id.to_s)
+              match = false
+              break
+            end
           end
-        end
 
-        recipes << recipe if match
+          recipes << recipe if match
+        end
+      else
+        recipes = Recipe.all
       end
 
       render json: recipes

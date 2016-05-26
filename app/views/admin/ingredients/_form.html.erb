@@ -10,16 +10,12 @@
    </ul>
    </div>
   <% end %>
+  <br>
+  <p><%= form.label :name %></p>
+  <p><%= form.text_field :name  %></p>
+  <p><%= form.label :category_id, 'Categories' %></p>
+  <p><%= form.select(:category_id, Category.pluck(:name, :id)) %></p>
 
-  <p>
-  <%= form.label :name %><br>
-  <%= form.text_field :name  %>
-  </p>
-  <p>
-  <%= form.label :category_id, 'Categories' %>
-  <%= form.select(:category_id, Category.pluck(:name, :id)) %>
-  </p>
-
-  <%= form.submit  %> or <%= link_to 'Cancel', admin_ingredients_path  %>
+  <div><%= form.submit  %> or <%= link_to 'Cancel', admin_ingredients_path  %></div>
 
 <% end %>
