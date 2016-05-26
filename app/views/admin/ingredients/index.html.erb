@@ -7,7 +7,7 @@
   <% @ingredients.each do |ingredient| %>
 
         <p class= 'ingredient_name'><%= ingredient.name %></p>
-        <%= link_to 'Edit', edit_admin_ingredient_path(ingredient)  %> | <%= link_to 'Delete', admin_ingredient_path(ingredient), method: :delete  %>
+        <%= link_to 'Edit', edit_admin_ingredient_path(ingredient), :class=>"button" %> | <%= link_to 'Delete', admin_ingredient_path(ingredient), method: :delete  %>
 
 
     <br>
