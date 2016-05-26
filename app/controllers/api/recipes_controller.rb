@@ -20,6 +20,7 @@ module Api
       else
         recipes = Recipe.all
       end
+
       render json: recipes
     end
   end

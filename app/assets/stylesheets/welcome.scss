@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #F9FBCC;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -17,14 +21,13 @@
   font-size: 14px;
   font-family: sans-serif;
   border: 10px;
-  background-color: #F9FBCC;
 }
 
 .main-header {
   background: #F5F6C8 url("vintage banner.png") no-repeat center;
-  opacity: 0.9;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   padding: 30px 0 10px 20px;
+  border-bottom: 5px solid #A5AA90;
   .app-title {
     font-size: 3.2em;
     word-spacing: 6px;
@@ -43,12 +46,18 @@
 }
 
 .ingredient-list,
-.real-time-display {
+.category-display,
+.real-time-recipe-display {
   float: left;
 }
 
+.category-display {
+  width: 20%;
+  padding-left: 10px;
+}
+
 .ingredient-list {
-  width: 60%;
+  width: 20%;
   padding-right: 50px;
   padding-left: 20px;
   .ingredient {
@@ -63,13 +72,29 @@
   }
 }
 
-.real-time-display {
-  width: 40%;
+.real-time-recipe-display {
+  width: 60%;
 }
 
 .recipe {
   padding: 5px;
   .cooking-time {
     font-size: 12px;
+  }
+}
+
+.category-button {
+  background: #DCBA83;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  &.active {
+    background-color: #9D9354;
   }
 }

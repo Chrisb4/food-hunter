@@ -19,17 +19,32 @@ $( document ).ready(function() {
 
     ingredients.done(function(data){
       for (var i = 0; i < data.length; i++) {
-        var categoryName = data[i].name
-        $('.ingredients').append('<h4 class="category-title">' + categoryName + '</h4>');
+        var categoryId = data[i].id;
+        var categoryName = data[i].name;
+        var ingredients = data[i].ingredients;
+        var $categoryButton = $('<button class="category-button" value="' +
+          categoryId + '">' + categoryName + '</button>');
 
-        var ingredients = data[i].ingredients
+        $('.categories').append($categoryButton)
+
         for (var j = 0; j < ingredients.length; j++) {
           var ingredient = ingredients[j]
-          $('.ingredients').append('<label class="ingredient">' +
-            '<input type="checkbox" name="ingredient" value=' + ingredient.id + '>' +
-            ingredient.name + '</label>');
+          $('.ingredients').append('<label class="ingredient" data-category-id="' +
+            categoryId + '">' + '<input type="checkbox" name="ingredient" value=' +
+            ingredient.id + '>' + ingredient.name + '</label>');
         }
       }
+
+      $('.category-button').click(function(event) {
+        var $button = $(event.currentTarget);
+        var categoryId = $button.val();
+
+        $('.ingredient').hide();
+        $('.ingredient[data-category-id=' + categoryId + ']').show();
+
+        $('.category-button').removeClass('active');
+        $button.addClass('active');
+      });
 
       $('input:checkbox[name=ingredient]').change(function(e) {
         var checkedIngredients = [];
@@ -65,9 +80,10 @@ $( document ).ready(function() {
     recipes.done(function(data){
       for (var i = 0; i < data.length; i++) {
         $('.recipes').append('<div class="recipe">' +
+          '<div><img src="' + data[i].photo_url + '"></div>' +
           '<h4 class="recipe-title">' + data[i].description + '</h4>' +
-          '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minute(s)' + '</p>' +
-          '<p>' + data[i].directions + '</p>' + '</div>');
+          '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minute(s)' +
+          '</p>' + '<p>' + data[i].directions + '</p>' + '</div>');
       }
     });
 
