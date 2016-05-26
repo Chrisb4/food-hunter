@@ -80,7 +80,7 @@ $( document ).ready(function() {
     recipes.done(function(data){
       for (var i = 0; i < data.length; i++) {
         $('.recipes').append('<div class="recipe">' +
-          '<div><img src="' + data[i].photo_url + '"></div>' +
+          '<div class="image" style="background-image: url(' + data[i].photo_url + '"></div>' +
           '<h4 class="recipe-title">' + data[i].description + '</h4>' +
           '<p class="cooking-time">' + 'Cooking Time: ' + data[i].minutes + ' minute(s)' +
           '</p>' + '<p>' + data[i].directions + '</p>' + '</div>');
