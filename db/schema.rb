@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525212306) do
+ActiveRecord::Schema.define(version: 20160527160828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,10 @@ ActiveRecord::Schema.define(version: 20160525212306) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "name"
-    t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "category_id"
   end
-
-  add_index "ingredients", ["category_id"], name: "index_ingredients_on_category_id", using: :btree
 
   create_table "ingredients_recipes", id: false, force: :cascade do |t|
     t.integer "ingredient_id", null: false
