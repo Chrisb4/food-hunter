@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(//fonts.googleapis.com/css?family=Fontdiner+Swanky);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+$colorBackground: #F9FBCC;
 
 * {
   margin: 0;
@@ -11,7 +13,7 @@
 }
 
 body {
-  background-color: #F9FBCC;
+  background-color: $colorBackground;
 }
 
 .container {
@@ -62,13 +64,7 @@ body {
   padding-left: 25px;
   .ingredient {
     padding-bottom: 5px;
-     display: block;
-  }
-  .ingredients-title {
-    padding-bottom: 5px;
-  }
-  .category-title {
-    padding-bottom: 5px;
+    display: block;
   }
 }
 
@@ -79,6 +75,11 @@ body {
 .recipe {
   padding: 5px;
   overflow: auto;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  border-bottom: 1px solid darken($colorBackground, 40%);
+  font-family: 'Special Elite', cursive;
+  background: url('<%= image_path 'img-noise.png' %>');
   .cooking-time {
     font-size: 12px;
   }
@@ -89,6 +90,7 @@ body {
     height: 100px;
     background-size: cover;
     margin-right: 10px;
+    border: 2px inset #A5AA90;
   }
 }
 
@@ -96,13 +98,14 @@ body {
   background: #DCBA83;
   border-radius: 10px;
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   padding: 10px;
   text-decoration: none;
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  font-family: sans-serif;
   &.active {
     background-color: #925A6F;
   }
