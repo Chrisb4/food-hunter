@@ -184,10 +184,10 @@ recipes = Recipe.create([
  ingredients: [ingredients[1], ingredients[4], ingredients[24], ingredients[25], ingredients[26], ingredients[3], ingredients[12]]
 },
 {name: "Cauliflower Rice",
- directions: "Wash and thoroughly dry 1 head of cauliflower, then remove all greens and cut into 4 even sections. With a box grater, use the medium-sized holes, or a food processor with an "S" shaped blade, to grate or pulse the cauliflower into the size of rice, leaving any large, tough stems behind. Transfer to a clean towel or paper towel and press to remove any excess moisture, which can make your dish soggy. Once you have your cauliflower rice, it's easy to cook! Simply sauté in a large skillet over medium heat in 1 Tbsp oil. Cover with a lid so the cauliflower steams and becomes more tender. Cook for a total of 5-8 minutes.",
+ directions: "Wash and thoroughly dry 1 head of cauliflower, then remove all greens and cut into 4 even sections. With a box grater or a food processor, to grate or pulse the cauliflower into the size of rice, leaving any large, tough stems behind. Transfer to a clean towel or paper towel and press to remove any excess moisture, which can make your dish soggy. Once you have your cauliflower rice, it's easy to cook! Simply sauté in a large skillet over medium heat in 1 Tbsp oil. Cover with a lid so the cauliflower steams and becomes more tender. Cook for a total of 5-8 minutes.",
  minutes: 10,
  description: "Cauliflower Rice",
- ingredients: [ingredients[2]
+ ingredients: [ingredients[2]]
 },
 {name: "Quinoa Salad with caramelized onions",
  directions: "Place 1¾ cups of rinsed quinoa and 2½ cups water in a saucepan. Bring to a boil, reduce heat to medium low, and cook until most of the water is absorbed. Slap on a tight-fitting lid on the quinoa, turn the heat to low, and let it cook for 15 minutes more. Turn off the heat. In a skillet, heat olive oil. Add 2 large red onions and 1 tbsp of sugar and saute over medium-low heat about 10-15 minutes until the onions turn a caramel-brown and soft. Remove the onions from the saucepan with a slotted spoon and set aside. To the same pan, add 2 large green peppers and 4 cloves of minced garlic and saute until the peppers turn tender but are still crunchy. Stir in the pepper. Fluff the quinoa with a fork to separate the grains, and add to the saucepan along with the onions. Stir everything together and turn off the heat.",
