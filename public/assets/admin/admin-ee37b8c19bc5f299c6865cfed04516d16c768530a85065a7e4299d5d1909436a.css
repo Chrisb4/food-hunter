@@ -1,0 +1,300 @@
+@import url(//fonts.googleapis.com/css?family=Fontdiner+Swanky);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+/* line 8, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* line 15, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+body {
+  background-color: #F9FBCC;
+}
+
+/* line 19, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  font-size: 14px;
+  font-family: sans-serif;
+  border: 10px;
+}
+
+/* line 28, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.main-header {
+  background: #F5F6C8 url("/assets/vintage-banner-0f6575ff84bee488672942949109601b06076e0bd14206c4ce0c3a10d7cbfad5.png") no-repeat center;
+  margin-bottom: 35px;
+  padding: 30px 0 10px 20px;
+  border-bottom: 5px solid #A5AA90;
+}
+/* line 33, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.main-header .app-title {
+  font-size: 3.2em;
+  word-spacing: 6px;
+  font-family: 'Fontdiner Swanky', cursive;
+}
+/* line 39, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.main-header .caveman-logo img {
+  width: 80px;
+  height: 85px;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+/* line 50, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.category-display,
+.ingredient-list,
+.real-time-recipe-display {
+  float: left;
+}
+
+/* line 56, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.category-display {
+  width: 17%;
+  padding-left: 10px;
+}
+
+/* line 61, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.category-button {
+  position: relative;
+  background: #DCBA83;
+  border-radius: 7px;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 73, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.category-button.active {
+  background-color: #925A6F;
+}
+
+/* line 78, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-counter {
+  display: block;
+  position: absolute;
+  top: -.75em;
+  right: -.75em;
+  background: #EE9329;
+  width: 1.5em;
+  border-radius: 50%;
+  height: 1.5em;
+  line-height: 1.5;
+  color: white;
+  font-size: 12px;
+}
+
+/* line 92, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-button {
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* line 98, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-list {
+  width: 17%;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 1px;
+}
+/* line 103, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-list .ingredient-button {
+  display: none;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  background: none;
+  border-bottom: 3px solid transparent;
+  width: 0px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  height: 25px;
+}
+/* line 114, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-list .ingredient-button.category-selected {
+  display: block;
+}
+/* line 117, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-list .ingredient-button.selected {
+  display: none;
+}
+/* line 120, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.ingredient-list .ingredient-button:hover {
+  border-bottom: 3px solid #5D969A;
+  width: 100%;
+}
+
+/* line 130, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.real-time-recipe-display {
+  width: 66%;
+}
+
+/* line 133, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.selected-ingredients-display {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: none;
+}
+/* line 137, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.selected-ingredients-display .ingredient-button {
+  background: #b3aa71;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  display: none;
+}
+/* line 143, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.selected-ingredients-display .ingredient-button.selected {
+  display: inline-block;
+}
+/* line 146, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.selected-ingredients-display .ingredient-button::after {
+  content: 'x';
+  float: right;
+  margin-left: 6px;
+  background: #7c7442;
+  width: 1.4em;
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 50%;
+  font-size: 1em;
+  color: white;
+}
+
+/* line 161, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.recipe {
+  padding: 5px;
+  overflow: auto;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #e0e912;
+  font-family: 'Special Elite', cursive;
+  background: url("/assets/img-noise-19a096b46c149d27b97675fea9e41ea7a2d7fed2a1d47880a47f5d91ecc05991.png");
+}
+/* line 169, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.recipe .cooking-time {
+  font-size: 12px;
+}
+/* line 172, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/welcome.scss.erb */
+.recipe .image {
+  border-radius: 5px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  margin-right: 10px;
+  border: 2px inset #A5AA90;
+}
+@import url(//fonts.googleapis.com/css?family=Fontdiner+Swanky);
+/* line 3, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav {
+  background: #F5F6C8 url(/assets/vintage-banner-0f6575ff84bee488672942949109601b06076e0bd14206c4ce0c3a10d7cbfad5.png) no-repeat center;
+  border: 1px solid black;
+  height: 108px;
+}
+/* line 7, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav ul {
+  margin-top: 30px;
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 1.5em;
+}
+/* line 11, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav ul li {
+  display: inline;
+  margin-left: 40px;
+}
+/* line 14, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav ul li a:link {
+  color: black;
+  text-decoration: none;
+}
+/* line 18, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+/* line 22, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-nav ul li a:hover {
+  color: red;
+}
+
+/* line 29, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-layout {
+  font-family: helvetica;
+}
+
+/* line 33, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/general.scss.erb */
+.admin-yield {
+  margin: 70px auto;
+  width: 60%;
+  border: 1px solid black;
+  overflow: auto;
+}
+/* line 6, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.ingredient-form {
+  margin: auto;
+  width: 70%;
+  border: 2px dotted red;
+}
+/* line 10, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.ingredient-form h1 {
+  margin: auto;
+}
+/* line 13, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.ingredient-form input {
+  border: 2px solid black;
+}
+/* line 16, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.ingredient-form textarea {
+  border: 2px solid black;
+}
+
+/* line 21, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.admin-ingredient-list {
+  margin: auto;
+  width: 30%;
+}
+
+/* line 25, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* line 35, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/ingredients.scss */
+.button:hover {
+  background-color: #fff;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+/* line 5, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/recipes.scss */
+input {
+  border: 2px solid black;
+}
+
+/* line 8, /Users/lauramateus/Desktop/food-hunter/app/assets/stylesheets/admin/recipes.scss */
+textarea {
+  border: 2px solid black;
+}
+/*
+
+
+
+ */
+
