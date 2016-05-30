@@ -109,9 +109,36 @@ ingredients = Ingredient.create([
 },
 {name: "Bacon",
   category: categories[0]
+},
+{name: "Watermelon",
+  category: categories[2]
+},
+{name: "Cantaloupe",
+  category: categories[2]
+},
+{name: "Honeydew Melon",
+  category: categories[2]
+},
+{name: "Lime",
+  category: categories[2]
+},
+{name: "Lemon",
+  category: categories[2]
+},
+{name: "Goat Cheese",
+  category: categories[4]
+},
+{name: "Peach",
+  category: categories[2]
+},
+{name: "Mozzarella",
+  category: categories[4]
+},
+{name: "Prosciutto",
+  category: categories[0]
 }
-
 ])
+
 
 Recipe.destroy_all
 
@@ -221,5 +248,26 @@ recipes = Recipe.create([
  description: "Dillicious Tuna Cucumber Salad",
  photo: File.new("#{Rails.root}/db/recipe_images/dillicious-tuna-cucumber-salad.jpg"),
  ingredients: [ingredients[21], ingredients[23], ingredients[8], ingredients[22]]
+},
+{name: "Fruit Salad Kabobs",
+ directions: "Slice the watermelon, cantaloupe and honeydew into bite-sized chunks, or use a cookie cutter to form them into shapes. Place the sliced fruit into a bowl. Skewer a piece of watermelon, cantaloupe and honeydew on each toothpick. If you are feeling frisky, while the fruit is still in the bowl, add vodka until all of the fruit is submerged. Cover bowl with tinfoil and refrigerate for at least two hours, or overnight.",
+ minutes: 15-120,
+ description: "Fruit Salad Kabobs",
+ photo: File.new("#{Rails.root}/db/recipe_images/Fruit-Salad-Kabobs.jpg"),
+ ingredients: [ingredients[27], ingredients[28], ingredients[29]]
+},
+{name: "Cantaloupe Goat Cheese Salad",
+ directions: "Remove peel and seeds from cantaloupe; discard. Cut it into 1/2-inch chunks. Arrange on large plate. Drizzle fresh lime juice (or lemon juice) and extra virgin olive oil over cantaloupe, then sprinkle with salt. Scatter goat cheese over it.",
+ minutes: 20,
+ description: "Cantaloupe Goat Cheese Salad",
+ photo: File.new("#{Rails.root}/db/recipe_images/cantaloupe-goat-cheese.jpg"),
+ ingredients: [ingredients[30], ingredients[31], ingredients[32], ingredients[28]]
+},
+{name: "Melon-and-Peach Salad with Prosciutto and Mozzarella",
+ directions: "In a bowl, toss the melon and peach with olive oil and balsamic vinegar; season with salt and pepper. Let stand for 5 minutes. Stir in the cheese. Transfer the salad to a platter, top with the prosciutto and serve.",
+ minutes: 30,
+ description: "Yummy stuff called a salad",
+ photo: File.new("#{Rails.root}/db/recipe_images/melon-peach-salad.jpg"),
+ ingredients: [ingredients[33], ingredients[34], ingredients[35], ingredients[29]]
 }
 ])
