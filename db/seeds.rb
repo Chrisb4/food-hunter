@@ -184,7 +184,7 @@ recipes = Recipe.create([
  directions: "Chop cabbage, onions and carrots in thin strips. Toss in Olive Oil and Apple Cider Vinegar. ",
  minutes: 10,
  description: "Like Crunchy Salad",
- photo: File.new("#{Rails.root}/db/recipe_images/quick-salw.jpeg"),
+ photo: File.new("#{Rails.root}/db/recipe_images/quick-slaw.jpeg"),
  ingredients: [ingredients[9], ingredients[8], ingredients[19], ingredients[7]]
 },
 {name: "BLT Breakfast Salad With Soft Boiled Eggs & Avocado",
