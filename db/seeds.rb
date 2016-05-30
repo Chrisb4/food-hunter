@@ -169,6 +169,7 @@ recipes = Recipe.create([
  directions: "Peel banana, spread peanut butter on top, sprinkle with raisins.",
  minutes: 5,
  description: "Not just for Kids",
+ photo: File.new("#{Rails.root}/db/recipe_images/banana_log_001.jpg"),
  ingredients: [ingredients[5], ingredients[0], ingredients[6]]
 },
 {name: "Quick Slaw",

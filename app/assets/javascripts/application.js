@@ -126,7 +126,7 @@ $( document ).ready(function() {
     recipes.done(function(data){
       for (var i = 0; i < data.length; i++) {
         $('.recipes').append('<div class="recipe">' +
-          '<div class="image" style="background-image: url(' + data[i].photo_url + '"></div>' +
+          '<div class="image" style="background-image: url(' + data[i].photo_url + ')"></div>' +
           '<h4 class="recipe-title">' + data[i].name + '</h4>' +
           '<p class="cooking-time">Cooking Time: ' + data[i].minutes + ' minute(s)</p>' +
           '<p class="recipe-directions">Directions: ' + data[i].directions + '</p></div>');
