@@ -5,6 +5,7 @@
 $( document ).ready(function() {
 
   // functions and variables ready at page load
+  window.selectedIngredients = [];
   getIngredients();
 
   // FUNCTIONS
@@ -23,15 +24,20 @@ $( document ).ready(function() {
         var categoryName = data[i].name;
         var ingredients = data[i].ingredients;
         var $categoryButton = $('<button class="category-button" value="' +
-          categoryId + '">' + categoryName + '</button>');
+          categoryId + '">' + categoryName + '<span class="ingredient-counter"></span></button>');
 
         $('.categories').append($categoryButton)
 
         for (var j = 0; j < ingredients.length; j++) {
-          var ingredient = ingredients[j]
-          $('.ingredients').append('<label class="ingredient" data-category-id="' +
-            categoryId + '">' + '<input type="checkbox" name="ingredient" value=' +
-            ingredient.id + '>' + ingredient.name + '</label>');
+          var ingredient = ingredients[j];
+          var $ingredientButton = '<button class="ingredient-button"' +
+                                  ' data-category-id="' + categoryId + '"' +
+                                  ' data-ingredient-id="' + ingredient.id + '">' +
+                                  ingredient.name +
+                                  '</button>';
+
+          $('.ingredients').append($ingredientButton);
+          $('.selected-ingredients-display').append($ingredientButton);
         }
       }
 
@@ -39,19 +45,37 @@ $( document ).ready(function() {
         var $button = $(event.currentTarget);
         var categoryId = $button.val();
 
-        $('.ingredient').hide();
-        $('.ingredient[data-category-id=' + categoryId + ']').show();
+        $('.ingredient-button').hide();
+        $('.ingredient-button[data-category-id=' + categoryId + ']').show();
 
         $('.category-button').removeClass('active');
         $button.addClass('active');
       });
 
-      $('input:checkbox[name=ingredient]').change(function(e) {
-        var checkedIngredients = [];
-        $("input:checkbox[name=ingredient]:checked").each(function(){
-          checkedIngredients.push($(this).val());
-        });
-        getRecipes(checkedIngredients);
+      $('.ingredients .ingredient-button').click(function(event) {
+        var $button = $(event.currentTarget);
+        var ingredientId = $button.data('ingredient-id');
+
+        $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').addClass('selected');
+
+        selectedIngredients.push(ingredientId);
+        $('.selected-ingredients-display').show();
+        getRecipes();
+      });
+
+      $('.selected-ingredients-display .ingredient-button').click(function(event) {
+        var $button = $(event.currentTarget);
+        var ingredientId = $button.data('ingredient-id');
+        var selectedIngredientIndex = selectedIngredients.indexOf(ingredientId);
+        selectedIngredients.splice(selectedIngredientIndex, 1);
+
+        if (selectedIngredients.length === 0) {
+          $('.selected-ingredients-display').hide();
+        }
+
+        getRecipes();
+
+        $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').removeClass('selected');
       });
 
     });
@@ -63,10 +87,10 @@ $( document ).ready(function() {
 
 
   // gets recipes from api
-  function getRecipes(checkedIngredients) {
+  function getRecipes() {
     $('.recipes').empty();
 
-    if (checkedIngredients.length === 0) {
+    if (selectedIngredients.length === 0) {
       return;
     }
 
@@ -74,7 +98,7 @@ $( document ).ready(function() {
       url: '/api/recipes',
       type: 'GET',
       dataType: 'json',
-      data: { ingredients: checkedIngredients }
+      data: { ingredients: selectedIngredients }
     });
 
     recipes.done(function(data){

@@ -47,8 +47,8 @@ body {
   }
 }
 
-.ingredient-list,
 .category-display,
+.ingredient-list,
 .real-time-recipe-display {
   float: left;
 }
@@ -58,18 +58,86 @@ body {
   padding-left: 10px;
 }
 
+.category-button {
+  background: #DCBA83;
+  border-radius: 7px;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  &.active {
+    background-color: #925A6F;
+  }
+}
+
+
+.ingredient-button {
+  padding: 5px;
+  font-size: 12px;
+}
+
+
 .ingredient-list {
   width: 17%;
   padding-right: 25px;
   padding-left: 25px;
-  .ingredient {
-    padding-bottom: 5px;
+  .ingredient-button {
     display: block;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    background: none;
+    border-bottom: 3px solid transparent;
+    width: 0px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    height: 25px;
+    &.selected {
+      display: none;
+    }
+    &:hover {
+      border-bottom: 3px solid #5D969A;
+      width: 100%;
+    }
   }
 }
 
+
+
+
 .real-time-recipe-display {
   width: 66%;
+}
+.selected-ingredients-display {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: none;
+  .ingredient-button {
+    background: lighten(#9D9354, 10%);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: none;
+    &.selected {
+      display: inline-block;
+    }
+    &::after {
+      content: 'x';
+      float: right;
+      margin-left: 6px;
+      background: darken(#9D9354, 10%);
+      width: 1.4em;
+      font-weight: bold;
+      line-height: 1.4;
+      border-radius: 50%;
+      font-size: 1em;
+      color: white;
+    }
+  }
 }
 
 .recipe {
@@ -94,19 +162,3 @@ body {
   }
 }
 
-.category-button {
-  background: #DCBA83;
-  border-radius: 10px;
-  color: black;
-  font-size: 22px;
-  font-weight: bold;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  font-family: sans-serif;
-  &.active {
-    background-color: #925A6F;
-  }
-}
