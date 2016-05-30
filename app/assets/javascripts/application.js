@@ -45,8 +45,8 @@ $( document ).ready(function() {
         var $button = $(event.currentTarget);
         var categoryId = $button.val();
 
-        $('.ingredient-button').hide();
-        $('.ingredient-button[data-category-id=' + categoryId + ']').show();
+        $('.ingredients .ingredient-button').removeClass('category-selected');
+        $('.ingredients .ingredient-button[data-category-id=' + categoryId + ']').addClass('category-selected');
 
         $('.category-button').removeClass('active');
         $button.addClass('active');
