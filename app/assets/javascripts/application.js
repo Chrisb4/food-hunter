@@ -23,6 +23,13 @@ $( document ).ready(function() {
           $button.find('.ingredient-counter').show();
         }
     });
+    if (selectedIngredients.length === 0) {
+      $('.instructions').show();
+      $('.category-button').removeClass('active');
+      $('.ingredients .ingredient-button').removeClass('category-selected');
+    } else {
+      $('.instructions').hide();
+    }
   };
 
   // gets ingredients from api
@@ -74,10 +81,11 @@ $( document ).ready(function() {
 
         $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').addClass('selected');
 
-        updateCategoriesCounter();
-
         selectedIngredients.push(ingredientId);
         $('.selected-ingredients-display').show();
+
+        updateCategoriesCounter();
+
         getRecipes();
       });
 
