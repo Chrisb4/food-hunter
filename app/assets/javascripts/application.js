@@ -9,6 +9,22 @@ $( document ).ready(function() {
   getIngredients();
 
   // FUNCTIONS
+  // counts the ingredients that are selected per category
+  function updateCategoriesCounter() {
+    $('.category-button').each(function(index, button) {
+      var $button = $(button);
+      var categoryId = $button.val();
+      var selectedCategoryCount = $('.ingredients .ingredient-button.selected[data-category-id=' + categoryId + ']').length;
+      $button.find('.ingredient-counter').text(selectedCategoryCount);
+
+      if (selectedCategoryCount === 0) {
+          $button.find('.ingredient-counter').hide();
+        } else {
+          $button.find('.ingredient-counter').show();
+        }
+    });
+  };
+
   // gets ingredients from api
   function getIngredients() {
 
@@ -24,7 +40,7 @@ $( document ).ready(function() {
         var categoryName = data[i].name;
         var ingredients = data[i].ingredients;
         var $categoryButton = $('<button class="category-button" value="' +
-          categoryId + '">' + categoryName + '<span class="ingredient-counter"></span></button>');
+          categoryId + '">' + categoryName + '<span class="ingredient-counter">0</span></button>');
 
         $('.categories').append($categoryButton)
 
@@ -58,6 +74,8 @@ $( document ).ready(function() {
 
         $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').addClass('selected');
 
+        updateCategoriesCounter();
+
         selectedIngredients.push(ingredientId);
         $('.selected-ingredients-display').show();
         getRecipes();
@@ -76,8 +94,12 @@ $( document ).ready(function() {
         getRecipes();
 
         $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').removeClass('selected');
+
+        updateCategoriesCounter();
       });
 
+
+      updateCategoriesCounter();
     });
 
     ingredients.fail(function(jqXHR, textStatus, errorThrown){
