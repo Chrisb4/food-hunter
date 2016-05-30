@@ -18,11 +18,12 @@ $( document ).ready(function() {
       $button.find('.ingredient-counter').text(selectedCategoryCount);
 
       if (selectedCategoryCount === 0) {
-          $button.find('.ingredient-counter').hide();
-        } else {
-          $button.find('.ingredient-counter').show();
-        }
+        $button.find('.ingredient-counter').hide();
+      } else {
+        $button.find('.ingredient-counter').show();
+      }
     });
+
     if (selectedIngredients.length === 0) {
       $('.instructions').show();
       $('.category-button').removeClass('active');
@@ -85,7 +86,6 @@ $( document ).ready(function() {
         $('.selected-ingredients-display').show();
 
         updateCategoriesCounter();
-
         getRecipes();
       });
 
@@ -106,7 +106,6 @@ $( document ).ready(function() {
         updateCategoriesCounter();
       });
 
-
       updateCategoriesCounter();
     });
 
@@ -114,7 +113,6 @@ $( document ).ready(function() {
       console.log(errorThrown);
     });
   }
-
 
   // gets recipes from api
   function getRecipes() {

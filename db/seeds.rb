@@ -105,7 +105,7 @@ ingredients = Ingredient.create([
   category: categories[1]
 },
 {name: "Sunflower Seeds",
-  category: categories[5]
+  category: categories[6]
 },
 {name: "Bacon",
   category: categories[0]
