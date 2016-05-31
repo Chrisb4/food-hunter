@@ -4,11 +4,11 @@
  */
 
  .devise-container {
-   border: 1px solid black;
    margin: 100px auto;
    width: 40%;
    text-align: center;
    font-family: helvetica;
+   /*line-height: */
  }
 input {
   border: 1px solid black;

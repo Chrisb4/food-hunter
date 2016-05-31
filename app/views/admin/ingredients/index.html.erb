@@ -4,15 +4,10 @@
 
 <p><%= link_to 'Add Ingredient', new_admin_ingredient_path %></p>
 
-  <div class="admin-ingredient-list">
-  <% @ingredients.each do |ingredient| %>
+<div class="admin-ingredient-list">
+<% @ingredients.each do |ingredient| %>
 
-        <p class= 'ingredient_name'><%= ingredient.name %></p>
-        <div><%= link_to 'Edit', edit_admin_ingredient_path(ingredient), :class=>"button" %> | <%= link_to 'Delete', admin_ingredient_path(ingredient), method: :delete  %></div>
-
-
-    <br>
-
-
-  <% end %>
+      <div class="ingredient-controls"><div class="ingredient-name"><%= ingredient.name %></div>
+      <div class="ingredient-icons"><%= link_to '<i class="fa fa-pencil-square-o  pencil" aria-hidden="true"></i>'.html_safe, edit_admin_ingredient_path(ingredient) %>  <%= link_to '<i class="fa fa-trash-o  trashcan" aria-hidden="true"></i>'.html_safe, admin_ingredient_path(ingredient)  %></div></div>
+<% end %>
 </div>
