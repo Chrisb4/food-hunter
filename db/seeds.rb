@@ -259,6 +259,9 @@ ingredients = Ingredient.create([
 },
 {name: "Whipped Cream",
   category: categories[4]
+},
+{name: "Potato",
+  category: categories[1]
 }
 ])
 
@@ -286,14 +289,14 @@ recipes = Recipe.create([
  minutes: 20,
  description: "Breakfast Goodness",
  photo: File.new("#{Rails.root}/db/recipe_images/omelet.jpeg"),
- ingredients: [ingredients[12], ingredients[8], ingredients[14], ingredients[16]]
+ ingredients: [ingredients[12], ingredients[8], ingredients[14]]
 },
 {name: "Simple Black Beans",
  directions: "Heat 2 Tablespoons of butter in a saucepan over medium low. Add onions and garlic, cook for 3 minutes.  Add black beans, salt, pepper, chili powder, and cayenne pepper.  Cook for 6 minutes until hot.",
  minutes: 15,
  description: "Tasty Black Beans",
  photo: File.new("#{Rails.root}/db/recipe_images/black-beans.jpeg"),
- ingredients: [ingredients[18], ingredients[8], ingredients[10], ingredients[16]]
+ ingredients: [ingredients[18], ingredients[8], ingredients[10]]
 },
 {name: "Sticky Nut Balls",
  directions: "In a medium size bowl, mix peanut butter, almonds and raisins.  Form into balls.  Place on a sterling silver tray with a doily.",
@@ -338,7 +341,7 @@ recipes = Recipe.create([
  ingredients: [ingredients[9], ingredients[8], ingredients[19], ingredients[7]]
 },
 {name: "BLT Breakfast Salad With Soft Boiled Eggs & Avocado",
- directions: "In a large bowl combine 1 bag of lettuce, 1/4 of a red onion, 1 tomato, 1/3 cup roasted sunflower seeds and chopped up 6 pieces of crispy bacon. Boil 2 eggs, peel them, slice them open and serve them on top of your salad with some avocado slices. Add dressing of preference or some Olive Oil",
+ directions: "In a large bowl combine 1 bag of lettuce, 1/4 of a red onion, 1 tomato, 1/3 cup roasted sunflower seeds and chopped up 6 pieces of crispy bacon. Boil 2 eggs, peel them, slice them open and serve them on top of your salad with some avocado slices. Add dressing of preference or some olive oil.",
  minutes: 15,
  description: "BLT Breakfast Salad",
  photo: File.new("#{Rails.root}/db/recipe_images/breakfast-salad.jpg"),
@@ -384,7 +387,7 @@ recipes = Recipe.create([
  minutes: 20,
  description: "Cantaloupe Goat Cheese Salad",
  photo: File.new("#{Rails.root}/db/recipe_images/cantaloupe-goat-cheese.jpg"),
- ingredients: [ingredients[30], ingredients[31], ingredients[32], ingredients[28]]
+ ingredients: [ingredients[30], ingredients[31], ingredients[28]]
 },
 {name: "Melon-and-Peach Salad with Prosciutto and Mozzarella",
  directions: "In a bowl, toss the melon and peach with olive oil and balsamic vinegar; season with salt and pepper. Let stand for 5 minutes. Stir in the cheese. Transfer the salad to a platter, top with the prosciutto and serve.",
@@ -392,5 +395,26 @@ recipes = Recipe.create([
  description: "Yummy stuff called a salad",
  photo: File.new("#{Rails.root}/db/recipe_images/melon-peach-salad.jpg"),
  ingredients: [ingredients[33], ingredients[34], ingredients[35], ingredients[29]]
+},
+{name: "Muddled potato",
+ directions: "Start by frying: Heat 2 tbsp of olive oil in a large frying pan. Empty a couple of roasted potatoes into the pan, spread them out to cover the base, then fry for 5 minutes. Pour in 4 beaten eggs so they completely cover the potatoes, season well and leave the tortilla to cook on a medium heat for about 15-20 minutes, or until the base and edges have set. Grill to finish: Take the tortilla off the hob and place under a hot grill until the top is firm, then remove from the grill and scatter over cut up tomatoes and mozzarella. Put the tortilla back under the grill for a further 3-5 minutes, or until the tomatoes are soft and the cheese has melted.",
+ minutes: 30,
+ description: "Muddled potato & mozzarella tortilla",
+ photo: File.new("#{Rails.root}/db/recipe_images/Muddled-potato.jpg"),
+ ingredients: [ingredients[77], ingredients[12], ingredients[24], ingredients[34]]
+},
+{name: "Fast and Friendly Meatballs",
+ directions: "Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13 inch baking dish with olive oil, and place it in the oven while preheating. In a medium bowl, mix together the ground turkey, 1 egg, and bread crumbs using your hands. Using an ice cream scoop if possible, form the meat into golf ball sized meatballs. Place about 1 inch apart in the hot baking dish. Press down to flatten the bottom just slightly. Bake for 15 minutes in the preheated oven, then turn them over, and continue baking for about 5 more minutes, or until somewhat crispy on the outside. Serve with pasta and sauce or however you'd like.",
+ minutes: 30,
+ description: "Fast and Friendly Meatballs",
+ photo: File.new("#{Rails.root}/db/recipe_images/Friendly-Meatballs.jpg"),
+ ingredients: [ingredients[39], ingredients[12], ingredients[63]]
+},
+{name: "Cottage Cheese and Blackberries",
+ directions: "Serve cottage cheese in a bowl (or if you have baked goods around, spread on toasted half). Top with blackberries and sprinkle with cinnamon.",
+ minutes: 3,
+ description: "Cottage Cheese and Blackberries",
+ photo: File.new("#{Rails.root}/db/recipe_images/cottage_cheese_berry.jpg"),
+ ingredients: [ingredients[43], ingredients[71]]
 }
 ])
