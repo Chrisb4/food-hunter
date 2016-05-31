@@ -5,7 +5,7 @@ module Api
       recipes = []
 
       if ingredients
-        Recipe.all.includes(:ingredients).each do |recipe|
+        Recipe.all.includes(:ingredients).order(:minutes).each do |recipe|
           match = true
 
           recipe.ingredients.each do |ingredient|
