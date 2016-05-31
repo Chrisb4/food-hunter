@@ -1,6 +1,8 @@
 <h1>Recipes</h1>
 <br>
-<%= link_to 'Add Recipe', new_admin_recipe_path, :class => 'add-btn' %>
+<div class="add-recipe-link">
+  <%= link_to 'Add Recipe', new_admin_recipe_path, :class => 'add-btn' %>
+</div>
 <br>
   <% @recipes.each do |recipe| %>
 

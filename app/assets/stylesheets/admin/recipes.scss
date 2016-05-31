@@ -8,3 +8,27 @@ input {
 textarea {
   border: 2px solid black;
 }
+
+
+.add-recipe-link {
+  margin-bottom: 15px;
+}
+.recipe-controls {
+  font-size: 1.5em;
+  .pencil{
+
+    font-size: 1em;
+    color: black;
+  }
+  .pencil:hover {
+          color: #4CAF50;
+      }
+    .trashcan {
+
+    font-size: 1em;
+    color: black;
+  }
+  .trashcan:hover {
+          color: red;
+  }
+}
