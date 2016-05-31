@@ -217,6 +217,48 @@ ingredients = Ingredient.create([
 },
 {name: "Broth",
   category: categories[5]
+},
+{name: "Bread",
+  category: categories[3]
+},
+{name: "Tortilla",
+  category: categories[3]
+},
+{name: "Oats",
+  category: categories[3]
+},
+{name: "Couscous",
+  category: categories[3]
+},
+{name: "Crackers",
+  category: categories[3]
+},
+{name: "Pasta",
+  category: categories[3]
+},
+{name: "Pita Bread",
+  category: categories[3]
+},
+{name: "Milk",
+  category: categories[4]
+},
+{name: "Cottage Cheese",
+  category: categories[4]
+},
+{name: "Cream Cheese",
+  category: categories[4]
+},
+{name: "Yogurt",
+  category: categories[4]
+},
+{name: "Ice Cream",
+  category: categories[4]
+},
+{name: "Sour Cream",
+  category: categories[4]
+},
+{name: "Whipped Cream",
+  category: categories[4]
 }
 ])
 
