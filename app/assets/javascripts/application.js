@@ -5,7 +5,7 @@
 $( document ).ready(function() {
 
   // functions and variables ready at page load
-  window.selectedIngredients = [];
+  var selectedIngredients = [];
   getIngredients();
 
   // FUNCTIONS
@@ -39,7 +39,7 @@ $( document ).ready(function() {
     var ingredients = $.ajax({
       url: '/api/ingredients',
       type: 'GET',
-      dataType: 'json',
+      dataType: 'json'
     });
 
     ingredients.done(function(data){
@@ -48,9 +48,9 @@ $( document ).ready(function() {
         var categoryName = data[i].name;
         var ingredients = data[i].ingredients;
         var $categoryButton = $('<button class="category-button" value="' +
-          categoryId + '">' + categoryName + '<span class="ingredient-counter">0</span></button>');
+          categoryId + '">' + categoryName + '<span class="ingredient-counter"></span></button>');
 
-        $('.categories').append($categoryButton)
+        $('.categories').append($categoryButton);
 
         for (var j = 0; j < ingredients.length; j++) {
           var ingredient = ingredients[j];
@@ -64,6 +64,8 @@ $( document ).ready(function() {
           $('.selected-ingredients-display').append($ingredientButton);
         }
       }
+
+      updateCategoriesCounter();
 
       $('.category-button').click(function(event) {
         var $button = $(event.currentTarget);
@@ -83,9 +85,11 @@ $( document ).ready(function() {
         $('.ingredient-button[data-ingredient-id=' + ingredientId + ']').addClass('selected');
 
         selectedIngredients.push(ingredientId);
+
         $('.selected-ingredients-display').show();
 
         updateCategoriesCounter();
+
         getRecipes();
       });
 
@@ -93,6 +97,7 @@ $( document ).ready(function() {
         var $button = $(event.currentTarget);
         var ingredientId = $button.data('ingredient-id');
         var selectedIngredientIndex = selectedIngredients.indexOf(ingredientId);
+
         selectedIngredients.splice(selectedIngredientIndex, 1);
 
         if (selectedIngredients.length === 0) {
@@ -106,7 +111,6 @@ $( document ).ready(function() {
         updateCategoriesCounter();
       });
 
-      updateCategoriesCounter();
     });
 
     ingredients.fail(function(jqXHR, textStatus, errorThrown){
