@@ -2,3 +2,21 @@
  *= require welcome
  *= require_self
  */
+
+ .devise-container {
+   border: 1px solid black;
+   margin: 100px auto;
+   width: 40%;
+   text-align: center;
+   font-family: helvetica;
+ }
+input {
+  border: 1px solid black;
+}
+label {
+  font-family: monospace;
+}
+
+.devise-container a {
+
+}
