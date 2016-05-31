@@ -1,13 +1,13 @@
 <h1>Recipes</h1>
 <br>
-<%= link_to 'Add Recipe', new_admin_recipe_path %>
+<%= link_to 'Add Recipe', new_admin_recipe_path, :class => 'add-btn' %>
 <br>
   <% @recipes.each do |recipe| %>
 
-  <div>
+  <div class ="recipe-controls">
     <div class= 'recipe_photo'><%= image_tag recipe.photo.url(:medium)  %></div>
     <p class= 'recipe_name'><%= recipe.name %></p>
-    <p><%= link_to 'Edit', edit_admin_recipe_path(recipe)  %> | <%= link_to 'Delete', admin_recipe_path(recipe), method: :delete  %></p>
+    <p><%= link_to '<i class="fa fa-pencil-square-o  pencil" aria-hidden="true"></i>'.html_safe, edit_admin_recipe_path(recipe)  %> | <%= link_to '<i class="fa fa-trash-o  trashcan" aria-hidden="true"></i>'.html_safe, admin_recipe_path(recipe), method: :delete  %></p>
   </div>
 
   <% end %>
