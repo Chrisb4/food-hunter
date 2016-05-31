@@ -10,19 +10,20 @@
      </ul>
    </div>
   <% end %>
+  <div class="recipes-form">
   <p><%= form.label :name %></p>
   <p><%= form.text_field :name  %></p>
   <p><%= form.label :minutes %></p>
   <p><%= form.text_field :minutes  %></p>
   <p><%= form.label :description %></p>
-  <p><%= form.text_field :description  %></p>
+  <p><%= form.text_area :description  %></p>
   <p><%= form.label :directions %></p>
-  <p><%= form.text_field :directions  %></p>
+  <p><%= form.text_area :directions  %></p>
 
 
   <div class="photo_upload">
-    <%= form.label :photo %>
-    <%= image_tag @recipe.photo.url(:thumb) %>
+    <%= form.label :photo %><br>
+    <%= image_tag @recipe.photo.url(:thumb) %><br>
     <%= form.file_field :photo %>
   </div>
 
@@ -30,6 +31,7 @@
   <p><%= form.label :ingredient_ids, 'Ingredients' %></p>
   <div><%= form.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %></div>
 
-  <div><%= form.submit  %> or <%= link_to 'Cancel', admin_recipes_path  %></div>
+  <div><%= form.submit  %> or <%= link_to 'Cancel', admin_recipes_path %></div>
 
   <% end %>
+  </div>
