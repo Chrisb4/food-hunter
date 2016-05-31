@@ -387,7 +387,7 @@ recipes = Recipe.create([
  minutes: 20,
  description: "Cantaloupe Goat Cheese Salad",
  photo: File.new("#{Rails.root}/db/recipe_images/cantaloupe-goat-cheese.jpg"),
- ingredients: [ingredients[30], ingredients[31], ingredients[28]]
+ ingredients: [ingredients[30], ingredients[32], ingredients[28]]
 },
 {name: "Melon-and-Peach Salad with Prosciutto and Mozzarella",
  directions: "In a bowl, toss the melon and peach with olive oil and balsamic vinegar; season with salt and pepper. Let stand for 5 minutes. Stir in the cheese. Transfer the salad to a platter, top with the prosciutto and serve.",
