@@ -136,6 +136,129 @@ ingredients = Ingredient.create([
 },
 {name: "Prosciutto",
   category: categories[0]
+},
+{name: "Ground Beef",
+  category: categories[0]
+},
+{name: "Steak",
+  category: categories[0]
+},
+{name: "Chicken Breast",
+  category: categories[0]
+},
+{name: "Ground Turkey",
+  category: categories[0]
+},
+{name: "Salmon",
+  category: categories[0]
+},
+{name: "Shrimp",
+  category: categories[0]
+},
+{name: "Pork Chop",
+  category: categories[0]
+},
+{name: "Blackberries",
+  category: categories[2]
+},
+{name: "Cherries",
+  category: categories[2]
+},
+{name: "Grapefruit",
+  category: categories[2]
+},
+{name: "Kiwi",
+  category: categories[2]
+},
+{name: "Mango",
+  category: categories[2]
+},
+{name: "Orange",
+  category: categories[2]
+},
+{name: "Plantain",
+  category: categories[2]
+},
+{name: "Brazil Nuts",
+  category: categories[6]
+},
+{name: "Cashews",
+  category: categories[6]
+},
+{name: "Macadamia Nuts",
+  category: categories[6]
+},
+{name: "Pecans",
+  category: categories[6]
+},
+{name: "Pistachio",
+  category: categories[6]
+},
+{name: "Flax Seeds",
+  category: categories[6]
+},
+{name: "Walnuts",
+  category: categories[6]
+},
+{name: "Almond Flour",
+  category: categories[5]
+},
+{name: "Capers",
+  category: categories[5]
+},
+{name: "Dried Fruit",
+  category: categories[5]
+},
+{name: "Pickles",
+  category: categories[5]
+},
+{name: "Diced Tomatoes",
+  category: categories[5]
+},
+{name: "Broth",
+  category: categories[5]
+},
+{name: "Bread",
+  category: categories[3]
+},
+{name: "Tortilla",
+  category: categories[3]
+},
+{name: "Oats",
+  category: categories[3]
+},
+{name: "Couscous",
+  category: categories[3]
+},
+{name: "Crackers",
+  category: categories[3]
+},
+{name: "Pasta",
+  category: categories[3]
+},
+{name: "Pita Bread",
+  category: categories[3]
+},
+{name: "Milk",
+  category: categories[4]
+},
+{name: "Cottage Cheese",
+  category: categories[4]
+},
+{name: "Cream Cheese",
+  category: categories[4]
+},
+{name: "Yogurt",
+  category: categories[4]
+},
+{name: "Ice Cream",
+  category: categories[4]
+},
+{name: "Sour Cream",
+  category: categories[4]
+},
+{name: "Whipped Cream",
+  category: categories[4]
 }
 ])
 
@@ -188,7 +311,7 @@ recipes = Recipe.create([
 },
 {name: "Snowmen Nose",
  directions: "Wash carrots under running water. Don't be a sucker and remove the skin!!! (That's where all the nutrients are!)",
- minutes: 1-3,
+ minutes: 3,
  description: "Pretend you're a Zombie, for Snowmen!!!",
  photo: File.new("#{Rails.root}/db/recipe_images/carrots.jpeg"),
  ingredients: [ingredients[19]]
@@ -251,7 +374,7 @@ recipes = Recipe.create([
 },
 {name: "Fruit Salad Kabobs",
  directions: "Slice the watermelon, cantaloupe and honeydew into bite-sized chunks, or use a cookie cutter to form them into shapes. Place the sliced fruit into a bowl. Skewer a piece of watermelon, cantaloupe and honeydew on each toothpick. If you are feeling frisky, while the fruit is still in the bowl, add vodka until all of the fruit is submerged. Cover bowl with tinfoil and refrigerate for at least two hours, or overnight.",
- minutes: 15-120,
+ minutes: 15,
  description: "Fruit Salad Kabobs",
  photo: File.new("#{Rails.root}/db/recipe_images/Fruit-Salad-Kabobs.jpg"),
  ingredients: [ingredients[27], ingredients[28], ingredients[29]]
